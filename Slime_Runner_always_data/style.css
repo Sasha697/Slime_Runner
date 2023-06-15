@@ -1,0 +1,132 @@
+@font-face{
+	font-family: Press_Start_2P;
+	font-style: normal;
+	src: url("assets/font/PressStart2P-Regular.ttf");
+}
+
+body{
+	font-family: Press_Start_2P;
+	font-size: 13px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #abc8c0 !important;
+	flex-direction: column;
+}
+
+/*------------------------CONNEXION------------------------*/
+input{
+  	padding: 10px;
+}
+
+/*------------------------GAME SECTION------------------------*/
+section{
+	background-color: lightblue;
+	background-image: url("assets/img/background/clouds.png");
+	background-position: 100% 100%;
+	padding: 20px;
+	padding-bottom: 50px;
+	border-radius: 6px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 1.0);
+}
+
+.game{
+	width: 600px;
+	height: 200px;
+	border: 1px solid;
+	overflow: hidden;
+	border: 0;
+	border-bottom: 1px solid #233252;
+}
+
+/*------------------------CHARACTER------------------------*/
+#character{
+	width: 60px;
+	height: 50px;
+	position: relative;
+	top: 150px;	
+}
+
+#character img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+/*------------JUMP ANIMATION----------------*/
+/*Create jump class to add/remove jump animation several times*/
+.jump{
+	animation: jump 0.4s linear;	
+}
+
+@keyframes jump {
+	0%{
+		top: 150px;
+	}
+	50%{
+		top: 60px;
+	}
+	100%{
+		top: 150px;
+	}
+}
+/*--------------------OBSATCLES ANIMATION----------------------*/
+#obstacle{
+	width: 60px;
+	height: 30px;
+	position: relative;
+	top: 120px;
+	left: 530px; 
+}
+
+#obstacle img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+}
+
+.obstacle_movement{
+	animation: obstacle_movement 2s infinite linear;
+}
+
+@keyframes obstacle_movement{
+	0%{
+		left: 530px;
+	}
+	100%{
+		left: -60px;
+	}
+}
+
+/*------------------------CONTROLS--------------------------*/
+.controls{
+	margin-top: 20px;
+	text-align: center;
+}
+
+a, button{
+	padding: 10px;
+	cursor: pointer;
+}
+
+a{
+	background-color: #34e4ea;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
+a:hover{
+	background-color: #0eb1d2;
+}
+
+p{
+    text-align: center;
+}
+
+.start_btn{
+	padding: 20px ;
+	background-color: #34e4ea;
+	border-radius: 4px;
+	text-decoration: none;
+}
